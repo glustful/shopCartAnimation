@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EZa-rh-cce">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--购物车动画-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="shopCartAnimationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mPE-JK-Xkt">
+                                <rect key="frame" x="0.0" y="64" width="600" height="486"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="moB-PB-hPH"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="V5e-Rw-mlc"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOn-6P-41V">
+                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="TabCartSelected.png" translatesAutoresizingMaskIntoConstraints="NO" id="tq3-cT-H6v">
+                                        <rect key="frame" x="530" y="5" width="30" height="40"/>
+                                    </imageView>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYl-vj-asd">
+                                        <rect key="frame" x="550" y="9" width="20" height="20"/>
+                                        <color key="backgroundColor" red="0.66340786438086563" green="1" blue="0.61258143743870197" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="6BL-aC-bXw"/>
+                                            <constraint firstAttribute="height" constant="20" id="UXu-7u-UN5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="tq3-cT-H6v" firstAttribute="top" secondItem="EOn-6P-41V" secondAttribute="top" constant="5" id="1aL-Xp-ZLt"/>
+                                    <constraint firstItem="tq3-cT-H6v" firstAttribute="top" secondItem="oYl-vj-asd" secondAttribute="bottom" constant="-24" id="2WN-3Y-k3S"/>
+                                    <constraint firstAttribute="height" constant="50" id="GD1-dN-tFJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="tq3-cT-H6v" secondAttribute="trailing" constant="40" id="JpM-df-Uzy"/>
+                                    <constraint firstAttribute="bottom" secondItem="tq3-cT-H6v" secondAttribute="bottom" constant="5" id="YnI-M1-Okv"/>
+                                    <constraint firstItem="oYl-vj-asd" firstAttribute="leading" secondItem="tq3-cT-H6v" secondAttribute="trailing" constant="-10" id="iHm-dD-8uy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mPE-JK-Xkt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EJA-hv-Uaf"/>
+                            <constraint firstItem="EOn-6P-41V" firstAttribute="top" secondItem="mPE-JK-Xkt" secondAttribute="bottom" id="P58-xM-uk7"/>
+                            <constraint firstAttribute="trailing" secondItem="mPE-JK-Xkt" secondAttribute="trailing" id="QZ4-gM-jwf"/>
+                            <constraint firstItem="EOn-6P-41V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ajs-DL-NPH"/>
+                            <constraint firstItem="mPE-JK-Xkt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="go9-wQ-cIV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EOn-6P-41V" secondAttribute="bottom" id="jHT-wG-nyq"/>
+                            <constraint firstAttribute="trailing" secondItem="EOn-6P-41V" secondAttribute="trailing" id="lJg-d3-4ui"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="购物车动画" id="xyz-Hx-e5I"/>
+                    <connections>
+                        <outlet property="shopCart" destination="tq3-cT-H6v" id="ea4-ef-Uqz"/>
+                        <outlet property="shopCount" destination="oYl-vj-asd" id="epD-Pc-qAE"/>
+                        <outlet property="showList" destination="mPE-JK-Xkt" id="mOD-zb-wvh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1188" y="-274"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="H64-1u-ldf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EZa-rh-cce" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="izp-hd-dGz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UuR-u6-J3i"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RP0-Gc-LXE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="398" y="-274"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TabCartSelected.png" width="30" height="30"/>
+    </resources>
+</document>

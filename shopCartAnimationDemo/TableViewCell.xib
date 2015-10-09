@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reusetablecell" rowHeight="100" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="shopCartAnimationDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="436" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="436" height="99"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test01.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wcf-bX-yLN">
+                        <rect key="frame" x="5" y="5" width="89" height="89"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="wcf-bX-yLN" secondAttribute="height" multiplier="1:1" id="NrU-aR-kBu"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBv-of-q2t">
+                        <rect key="frame" x="376" y="5" width="40" height="89"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                        <state key="normal" title="购买">
+                            <color key="titleColor" red="1" green="0.1150030025819343" blue="0.13510448686848842" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="shopAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="GKH-2m-Htq"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paN-Ra-rqb">
+                        <rect key="frame" x="104" y="5" width="262" height="89"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="paN-Ra-rqb" secondAttribute="bottom" constant="5" id="F7u-66-2l8"/>
+                    <constraint firstAttribute="bottom" secondItem="MBv-of-q2t" secondAttribute="bottom" constant="5" id="FpB-f1-u5p"/>
+                    <constraint firstItem="paN-Ra-rqb" firstAttribute="leading" secondItem="wcf-bX-yLN" secondAttribute="trailing" constant="10" id="GYB-iI-ZfN"/>
+                    <constraint firstAttribute="trailing" secondItem="MBv-of-q2t" secondAttribute="trailing" constant="20" id="Kbi-C6-xPZ"/>
+                    <constraint firstItem="MBv-of-q2t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="T2C-02-l8W"/>
+                    <constraint firstAttribute="bottom" secondItem="wcf-bX-yLN" secondAttribute="bottom" constant="5" id="sOq-we-yld"/>
+                    <constraint firstItem="MBv-of-q2t" firstAttribute="leading" secondItem="paN-Ra-rqb" secondAttribute="trailing" constant="10" id="tYi-Aj-eJc"/>
+                    <constraint firstItem="wcf-bX-yLN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="uiY-BN-SQk"/>
+                    <constraint firstItem="paN-Ra-rqb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="umn-L7-kqr"/>
+                    <constraint firstItem="wcf-bX-yLN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="zRY-SJ-vgX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="headImage" destination="wcf-bX-yLN" id="PKb-ZM-2of"/>
+                <outlet property="title" destination="paN-Ra-rqb" id="2LR-DB-9yC"/>
+            </connections>
+            <point key="canvasLocation" x="622" y="336"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="test01.jpg" width="491" height="686"/>
+    </resources>
+</document>
